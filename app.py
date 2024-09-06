@@ -35,7 +35,7 @@ def get_password(profile):
 data_list=[]
 for profile in profiles:
      password=get_password(profile)
-     data_list.append({"Profiles":profile,"Password":password if password!=None else "N/A"})
+     data_list.append({"Network Name":profile,"Password":password if password!=None else "N/A"})
 
 data=pd.DataFrame(data_list)
 st.write(data, unsafe_allow_html=True)
